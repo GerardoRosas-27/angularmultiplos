@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-entrada',
@@ -16,7 +17,12 @@ export class EntradaComponent implements OnInit {
   }
 
   onCalcular(){
-    this.salidaMultiplo.emit(this.entrada);
+    if(this.entrada > 0){
+      this.salidaMultiplo.emit(this.entrada);
+    }else{
+      Swal.fire('','Ingresa un numero mayor a 0', 'error');
+    }
+    
   }
 
 }

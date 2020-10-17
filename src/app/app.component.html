@@ -1,11 +1,13 @@
 <div class="container">
   <h2 class="text-center pt-3">Encontrar multiplos 3, 5 y 7</h2>
+  <h4 class="text-center py-3">Entrada</h4>
   <div class="row justify-content-center">
-    <h4 class="text-center py-3">Entrada</h4>
-    <app-entrada></app-entrada>
+    
+    <app-entrada (salidaMultiplo)="multiplos($event)"></app-entrada>
   </div>
+  <h4 class="text-center py-3">Resultados</h4>
   <div class="row justify-content-center">
-    <h4 class="text-center py-3">Resultados</h4>
-    <app-salida></app-salida>
-  </div>
+   
+    <app-salida (guardar)="onGuardar($event)" [multiplos3]="resultMultiplos3" [multiplos5]="resultMultiplos5" [multiplos7]="resultMultiplos7" [multiploMenor]="resultMultiploMenor"></app-salida>
+  </div> 
 </div>

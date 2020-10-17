@@ -1,1 +1,31 @@
-<p>salida works!</p>
+<div class="row">
+    <div class="col-sm-4">
+        <p>Multiplos de 3</p>
+        <ul>
+            <li class="colorVerde" *ngFor="let numero of multiplos3">{{ numero }}</li>
+        </ul>
+    </div>
+    <div class="col-sm-4">
+        <p>Multiplos de 5</p>
+        <ul>
+            <li class="colorRojo" *ngFor="let numero of multiplos5">{{ numero }}</li>
+        </ul>
+    </div>
+    <div class="col-sm-4">
+        <p>Multiplos de 7</p>
+        <ul>
+            <li class="colorAzul" *ngFor="let numero of multiplos7">{{ numero }}</li>
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <p>Multiplo menor, con los multiplos que cuentan con mas de un multiplo, quitando los 0</p>
+</div>
+<div class="row colorVerde">
+    [
+    <p *ngFor="let item of multiploMenor; let i=index;"> {{ i === 1 ? ' Y ' : i > 1 ? ' , ' : ' ' }}  {{ item }}</p>
+    ]
+</div>
+<div class="row justify-content-center">
+    <button (click)="onGuardar()" class="btn btn-primary">Guardar</button>
+</div>

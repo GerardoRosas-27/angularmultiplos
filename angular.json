@@ -26,7 +26,18 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "allowedCommonJsDependencies": [
+              "angularfire2",
+              "angularfire2/storage",
+              "@firebase/database",
+              "@firebase/component",
+              "@firebase/app",
+              "firebase/app",
+              "firebase/storage",
+              "@firebase/util"
+           ]
+          
           },
           "configurations": {
             "production": {
