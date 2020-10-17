@@ -6,6 +6,11 @@ import { EntradaComponent } from './components/entrada/entrada.component';
 import { SalidaComponent } from './components/salida/salida.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+//----firebase
+import { environment } from "../environments/environment";
+import { AngularFireModule } from "angularfire2";
+import { AngularFireDatabaseModule } from "angularfire2/database";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +20,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

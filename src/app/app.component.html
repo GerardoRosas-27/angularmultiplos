@@ -7,7 +7,10 @@
   </div>
   <h4 class="text-center py-3">Resultados</h4>
   <div class="row justify-content-center">
-   
-    <app-salida (guardar)="onGuardar($event)" [multiplos3]="resultMultiplos3" [multiplos5]="resultMultiplos5" [multiplos7]="resultMultiplos7" [multiploMenor]="resultMultiploMenor"></app-salida>
+    <app-salida [statusGuardar]="true" [insertado]="numeroInsertado" (guardar)="onGuardar($event)" [multiplos3]="resultMultiplos3" [multiplos5]="resultMultiplos5" [multiplos7]="resultMultiplos7" [multiploMenor]="resultMultiploMenor"></app-salida>
   </div> 
+  <h4 class="text-center py-3">Lista de multiplos guardados en firebase</h4>
+  <div class="row justify-content-center">
+    <app-salida *ngFor="let item of firebaseMultiplos" [statusGuardar]="false" [insertado]="item.insertar" (guardar)="onGuardar($event)" [multiplos3]="item.multiplos3" [multiplos5]="item.multiplos5" [multiplos7]="item.multiplos7" [multiploMenor]="item.menor"></app-salida>
+  </div>
 </div>

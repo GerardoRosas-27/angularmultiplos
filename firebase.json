@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "angularmultiplos",
+      "public": "dist/angularmultiplos",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

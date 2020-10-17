@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angularmultiplos": {
+      "hosting": {
+        "angularmultiplos": [
+          "angularmultiplos"
+        ]
+      }
+    }
+  }
+}

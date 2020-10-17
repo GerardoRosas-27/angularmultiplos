@@ -10,6 +10,8 @@ export class SalidaComponent implements OnInit {
   @Input() multiplos5: number[];
   @Input() multiplos7: number[];
   @Input() multiploMenor: number[];
+  @Input() insertado: number;
+  @Input() statusGuardar: boolean;
   @Output() guardar: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   constructor() { }
